@@ -1,5 +1,6 @@
 "use strict";
 const Models = require("../models");
+
 const getUserPosts = (req, res) => {
   // finds all posts for a given user and includes matching user details
   Models.Post.findAll({
@@ -15,6 +16,7 @@ const getUserPosts = (req, res) => {
       res.send({ result: 500, error: err.message });
     });
 };
+
 const createPosts = (data, res) => {
   // finds all posts for a given user and includes matching user details
   Models.Post.create(data)

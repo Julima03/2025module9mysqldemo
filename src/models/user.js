@@ -19,6 +19,14 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    middleName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    dob: {
+      type: DataTypes.TIME,
+      allowNull: false,
+    },
     emailId: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -31,7 +39,7 @@ User.init(
   },
   {
     sequelize: sequelizeInstance,
-    modelName: "users", // use
+    modelName: "users", // uselowercase plural format
     timestamps: true,
     freezeTableName: true,
   }
